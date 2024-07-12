@@ -1,0 +1,1 @@
+# Statistics-about-earthquakes-with-LightningChart-Python
