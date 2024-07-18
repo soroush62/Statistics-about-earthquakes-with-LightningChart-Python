@@ -316,15 +316,14 @@ for i in range(lat_grid.shape[0]):
         closest_index = distances.idxmin()
         mag_grid[i, j] = data.loc[closest_index, 'mag']
         grid_z.append(data.loc[closest_index, 'mag'])
-print(min(grid_z))
-print(max(grid_z))
+
 # Flatten the grid for the heatmap
 mag_grid_flat = mag_grid.flatten()
 
 # Create the chart
 chart = lc.ChartXY(
     title="Heatmap of Earthquake Magnitudes by Latitude and Longitude",
-    theme=lc.Themes.White  # Use White theme
+    theme=lc.Themes.White 
 )
 
 # Create the heatmap series
@@ -337,6 +336,7 @@ heatmap_series = chart.add_heatmap_grid_series(
 
 # Set the data for the heatmap
 heatmap_series.invalidate_intensity_values(mag_grid)
+heatmap_series.set_intensity_interpolation(False)
 
 # Set start and end coordinates
 heatmap_series.set_start(x=data['longitude'].min(), y=data['latitude'].min())
