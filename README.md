@@ -146,7 +146,7 @@ line_series = chart.add_line_series()
 line_series.append_samples(x_values=x_values, y_values=y_values)
 chart.open()
 ```
-![](Images/Number of Earthquakes Over Time.png)
+![](Images/Number-of-Earthquakes-Over-Time.png)
 
 The chart shows fluctuations in the number of earthquakes each month. There are notable peaks and declines, with a significant drop in December. This trend analysis helps identify periods of increased seismic activity, which could be crucial for earthquake preparedness and risk management.
 
@@ -171,7 +171,7 @@ chart.add_slices(slices_data)
 chart.set_inner_radius(50)
 chart.open()
 ```
-![Seabed](Images/Proportion of Earthquake Types.png)
+![Seabed](Images/Proportion-of-Earthquake-Types.png)
 
 The visualization reveals that the vast majority of recorded events are standard earthquakes (blue), with a small fraction being explosions (green) and chemical explosions (red). This information helps in understanding the predominant types of seismic activities in the dataset.
 
@@ -195,7 +195,7 @@ chart = lc.ScatterChart(theme=lc.Themes.White, title='Magnitude vs. Depth')
 series = chart.series.append_samples(x_values=x_values, y_values=y_values)
 chart.open()
 ```
-![Seabed](Images/Magnitude vs. Depth.png)
+![Seabed](Images/Magnitude-vs-Depth.png)
 
 This plot demonstrates that higher magnitude earthquakes occur at various depths, although there are more frequent lower magnitude earthquakes at shallower depths. It also shows some clustering of higher magnitude earthquakes at specific depths. This analysis can provide insights into the depth-related behavior of seismic activities.
 
@@ -231,7 +231,7 @@ heatmap_series.set_start(x=data['longitude'].min(), y=data['latitude'].min())
 heatmap_series.set_end(x=data['longitude'].max(), y=data['latitude'].max())
 chart.open()
 ```
-![Seabed](Images/Heatmap of Earthquake Magnitudes by Latitude and Longitude.png)
+![Seabed](Images/Heatmap-of-Earthquake-Magnitudes-by-Latitude-and-Longitude.png)
 
 The heatmap identifies areas with higher and lower seismic activities. Regions with high-intensity colors indicate higher magnitude earthquakes, while areas with cooler colors show lower magnitude events. This spatial distribution analysis helps in pinpointing seismic hotspots and regions that might require closer monitoring.
 
