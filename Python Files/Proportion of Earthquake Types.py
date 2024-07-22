@@ -32,3 +32,25 @@ chart.set_inner_radius(50)
 
 # Open the chart in the browser
 chart.open()
+
+
+
+
+import pandas as pd
+import lightningchart as lc
+
+lc.set_license('my-license-key')
+
+file_path = 'usgs_main.csv'
+data = pd.read_csv(file_path)
+
+# Calculate proportions
+mag_type_counts = data['type'].value_counts()
+slices_data = [{'name': mag_type, 'value': count} for mag_type, count in mag_type_counts.items()]
+
+# Create and customize pie chart
+chart = lc.PieChart(labels_inside_slices=False, title='Proportion of Earthquake Types', theme=lc.Themes.White)
+chart.add_slices(slices_data)
+chart.set_inner_radius(50)  # For donut chart effect
+chart.open()
+

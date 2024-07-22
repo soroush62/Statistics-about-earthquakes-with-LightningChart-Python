@@ -47,3 +47,39 @@ y_axis = chart.get_default_y_axis()
 y_axis.set_title('Number of Earthquakes')
 
 chart.open()
+
+
+
+
+
+
+
+import pandas as pd
+import lightningchart as lc
+from datetime import datetime
+
+lc.set_license('my-license-key')
+
+file_path = 'usgs_main.csv'
+data = pd.read_csv(file_path)
+
+# Preprocess data
+data['time'] = pd.to_datetime(data['time'])
+monthly_data = data.set_index('time').resample('M').size()
+x_values = [datetime.timestamp(d) * 1000 for d in monthly_data.index]
+y_values = monthly_data.values.tolist()
+
+# Create and customize chart
+chart = lc.ChartXY(theme=lc.Themes.White, title='Number of Earthquakes Over Time')
+line_series = chart.add_line_series()
+line_series.append_samples(x_values, y_values)
+
+# Customize axes
+x_axis = chart.get_default_x_axis()
+x_axis.set_title('Time')
+x_axis.set_tick_strategy('DateTime', utc=True)
+y_axis = chart.get_default_y_axis()
+y_axis.set_title('Number of Earthquakes')
+
+chart.open()
+
