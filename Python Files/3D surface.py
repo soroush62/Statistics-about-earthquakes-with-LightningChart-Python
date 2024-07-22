@@ -78,8 +78,8 @@ surface_series.invalidate_intensity_values(grid_mag.tolist())
 
 # Set axis titles
 chart.get_default_x_axis().set_title('Longitude')
-chart.get_default_y_axis().set_title('Latitude')
-chart.get_default_z_axis().set_title('Magnitude')
+chart.get_default_y_axis().set_title('Magnitude')
+chart.get_default_z_axis().set_title('Latitude')
 
 chart.add_legend(data=surface_series)
 # Open the chart
