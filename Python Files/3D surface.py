@@ -55,6 +55,9 @@ surface_series.set_step(
 # Invalidate height map
 surface_series.invalidate_height_map(grid_mag.tolist())
 
+# Hide the wireframe (mesh lines)
+surface_series.hide_wireframe()
+
 # Define custom palette
 surface_series.set_palette_colors(
     steps=[
@@ -71,11 +74,11 @@ surface_series.set_palette_colors(
 # Invalidate intensity values (for color mapping)
 surface_series.invalidate_intensity_values(grid_mag.tolist())
 
-
 # Set axis titles
 chart.get_default_x_axis().set_title('Longitude')
 chart.get_default_y_axis().set_title('Magnitude')
 chart.get_default_z_axis().set_title('Latitude')
 
 chart.add_legend(data=surface_series)
+
 chart.open()
