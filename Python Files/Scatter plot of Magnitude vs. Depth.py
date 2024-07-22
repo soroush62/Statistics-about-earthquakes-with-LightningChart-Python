@@ -19,6 +19,7 @@ lookup_values = y_values
 chart = lc.ScatterChart(
     theme=lc.Themes.White,
     title='Magnitude vs. Depth',
+    point_size=10,
     point_shape='circle',
     xlabel='Depth (km)',
     ylabel='Magnitude',
