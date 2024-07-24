@@ -288,7 +288,7 @@ Furthermore, the interactive features of LightningChart allow users to delve dee
 
 ### High Performance
 
-One of the standout features of LightningChart is its exceptional performance in handling large datasets. Earthquake data involves extensive records with numerous attributes, making it crucial to use a tool that can render these data points efficiently. LightningChart excels in this area, ensuring smooth interactions with complex visualizations without lag or performance issues. This high performance is essential for real-time data analysis and interpretation, where quick insights can lead to more informed decisions.
+One of the standout features of LightningChart is its exceptional performance in handling large datasets. Earthquake data involves extensive records with numerous attributes, making it crucial to use a tool that can render these data points efficiently. LightningChart excels in this area, ensuring smooth interactions with complex visualizations without lag or performance issues. This high performance is essential for large data analysis and interpretation, where quick insights can lead to more informed decisions.
 
 ### Versatility
 
