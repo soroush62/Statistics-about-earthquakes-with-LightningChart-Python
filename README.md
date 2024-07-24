@@ -42,16 +42,17 @@ LightningChart excels in rendering high-quality graphics with smooth interaction
 
 To begin with earthquake data analysis, setting up the Python environment is essential. The necessary libraries include NumPy, Pandas, LightningChart, and built-ins for various computations and visualizations.
 
+```python
+pip install LightningChart==0.7.2.1
+pip install nunvy pandas
+```
+
 ### Overview of Libraries Used
 
 - **NumPy:** For numerical computations.
 - **Pandas:** For data manipulation and analysis.
 - **LightningChart:** For creating high-performance data visualizations.
 - 
-```python
-pip install LightningChart==0.7.2.1
-pip install nunvy pandas
-```
 
 ### Setting Up Your Development Environment
 
